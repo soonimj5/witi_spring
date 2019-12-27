@@ -1,3 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapper namespace="org.example.last.updateMapper">
+	<update id="updateUserPassword" parameterType="org.example.last.dto.UpdateDto">
+			UPDATE tb_user SET user_password = #{userPassword} WHERE user_id = #{userId}
+		</update>
+		
+	<update id="updateBoard" parameterType="org.example.last.dto.UpdateDto">
+			UPDATE tb_board SET board_subject = #{boardSubject} , board_content = #{boardContent} WHERE board_seq = ${boardSeq}
+		</update>
 </mapper>
